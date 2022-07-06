@@ -1,0 +1,132 @@
+:root{
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Red Hat Display', sans-serif;
+}
+body{
+    background-color: var(--paleblue);
+}
+main{
+    width: 60%;
+    height: 40rem;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+}
+main img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    color: var(--darkblue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.description-mobile{
+    text-align: center;
+    color: var(--desaturatedblue);
+}
+.description-desktop{
+    display: none;
+}
+
+.price{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price img{
+    width: 3rem;
+    padding-left: 30px;
+}
+.price a{
+    padding-right: 30px;
+    color: var(--brightblue);
+    font-weight: 700;
+    cursor:grab;
+}
+.price .anualplan{
+    padding-right: 15px;
+    color: var(--desaturatedblue);
+}
+.price .anualplan span{
+    font-weight: bold;
+    color: var(--darkblue);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.buttons .payment{
+    background-color: var(--brightblue);
+    color: white;
+    margin: auto;
+    margin-top: 25px;
+    width: 80%;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor:grab;
+}
+.buttons .cancel{
+    background-color: white;
+    color: var(--desaturatedblue);
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor:grab;
+}
+
+@media (min-width:1440px) {
+    .description-desktop{
+        display: block;
+        text-align: center;
+        color: var(--desaturatedblue);
+    }
+    .description-mobile{
+        display: none;
+    }
+    
+    .price{
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .price img{
+        width: 3rem;
+        padding-left: 55px;
+    }
+    .price a{
+        padding-right: 60px;
+        color: var(--brightblue);
+        font-weight: 700;
+    }
+    .price .anualplan{
+        padding-right: 50px;
+        color: var(--desaturatedblue);
+    }
+}
